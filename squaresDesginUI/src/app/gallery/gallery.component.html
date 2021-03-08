@@ -1,211 +1,294 @@
-
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(assets/images/author.jpg);"></span>Louie Smith</a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li class="colorlib-active"><a href="collection.html">Collection</a></li>
-					<li><a href="about.html">About Me</a></li>
-
-          <li><a [routerLink]="['/upload']">upload</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-
-			<div class="colorlib-footer">
-				<h3>Newsletter</h3>
-				<div class="d-flex justify-content-center">
-					<form action="#" class="colorlib-subscribe-form">
-            <div class="form-group d-flex">
-            	<div class="icon"><span class="icon-paper-plane"></span></div>
-              <input type="text" class="form-control" placeholder="Enter Email Address">
+  <!-- ? Preloader Start -->
+  <div  *ngIf = loadingbar>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="assets/img/logo/loder.png" alt="">
             </div>
-          </form>
-				</div>
-			</div>
-		</aside> <!-- END COLORLIB-ASIDE -->
-		<div  id="colorlib-main">
-			<section class="ftco-section ftco-bread">
-				<div class="container">
-					<div class="row no-gutters slider-text justify-content-center align-items-center">
-	          <div class="col-md-8 ftco-animate">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
-	            <h1 class="bread">My Collection</h1>
-	          </div>
-	        </div>
-				</div>
-			</section>
-			<section class="ftco-section-3">
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<header>
+    <!--? Header Start -->
+    <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-xl-2 col-lg-2 col-md-1">
+                        <div class="logo logosize">
+                            <a  href="index.html"><img class=" logosize" src="assets/img/logo/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-10">
+          <div class="main-menu black-menu menu-bg-white d-none d-lg-block">
+            <div class="hamburger hamburger--collapse">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+            <nav class="hamburger-menu">
+              <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li [routerLink]="['/projects']" ><a  >  Project</a></li>
+                <li>
+                  <a href="blog.html">Blog</a>
+                  <ul class="submenu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_details.html">Blog Details</a></li>
+                                            <li><a href="elements.html">Element</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<!-- header end -->
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 pt-70 text-center">
+                            <h2>Project</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? Popular Work Start -->
+    <section class="popular-work-area ">
+        <div class="container">
+       
+           
+              <section class="ftco-section-3">
       
-				<div  *ngIf="isValid"  class="photograhy">
-					<div class="row">
-          
-            
-
-
-
-            
-
-						<div class="col-md-4 ftco-animate"   *ngFor="let person of thumnliereponseList">
-            
-              <a href={{person.imageurl}} class="photography-entry img image-popup d-flex justify-content-start align-items-end text"  [style.background-image]="'url(' + person.imageurl  + ')'">
-                <div class="overlay"></div>
-								<div class="text ml-4 mb-4">
-
-                  <h3>{{person.name | uppercase}}</h3>
-									<span class="tag">DETAILS</span>
-                  <table class="tag" >
-
-                    <tr>
-                      <td>
-                        <picture>
-                          <source media="(min-width:650px)" srcset="assets/images/exposer.png">
-                          <source media="(min-width:465px)" srcset="assets/images/exposer.png">
-                          <img class="imagesityleexposer" src="assets/images/exposer.jpg" alt="Flowers"  width="20" height="20">
-                        </picture>
-                      </td>
-                     
-                     <td>
-                        <h6 class = "picdetails">{{person.exposure | uppercase}}</h6>
-                      </td>
-                </tr>
-  
-                <tr>
-                  <td>
-                      <picture>
-                        <source media="(min-width:650px)" srcset="assets/images/ashutte.png">
-                        <source media="(min-width:465px)" srcset="assets/images/ashutte.png">
-                        <img class="imagesityle" src="assets/images/image_1.jpg" alt="Flowers"  width="20" height="20">
-                      </picture>
-                    </td>
-                   
-                   <td>
-                      <h6 class = "picdetails">{{person.apparture}}</h6>
-                    </td>
-                 </tr>
-                 <tr>
-                  <td>
-                                  <picture>
-                                    <source media="(min-width:650px)" srcset="assets/images/iso.png">
-                                    <source media="(min-width:465px)" srcset="assets/images/iso.png">
-                                    <img class="imagesityle" src="assets/images/iso.jpg" alt="Flowers"  width="20" height="20">
-                                  </picture>
-                                </td>
-                               
-                               <td>
-                                  <h6 class = "picdetails">{{person.iso}}</h6>
-                   </td>
-               </tr>
-               <tr>
-                <td>
+                <div   class="photograhy">
+                  <div class="row">
+                  
+                    
+        
+        
+        
+                    
+        
+                    <div class="col-md-4 "   *ngFor="let person of thumnliereponseList">
+                    
+                      <a href={{person.imageurl}} class="photography-entry img image-popup d-flex justify-content-start align-items-end text"  [style.background-image]="'url(' + person.imageurl  + ')'">
+                        <div class="overlay"></div>
+                        <div class="text ml-4 mb-4">
+        
+                          <h3>{{person.name | uppercase}}</h3>
+                          <span class="tag">DETAILS</span>
+                          <table class="tag" >
+        
+                            <tr>
+                              <td>
                                 <picture>
-                                  <source media="(min-width:650px)" srcset="assets/images/camera.png">
-                                  <source media="(min-width:465px)" srcset="assets/images/camera.png">
-                                  <img class="imagesitylecamera" src="assets/images/camera.jpg" alt="Flowers"  width="20" height="20">
+                                  <source media="(min-width:650px)" srcset="assets/images/exposer.png">
+                                  <source media="(min-width:465px)" srcset="assets/images/exposer.png">
+                                 
                                 </picture>
                               </td>
                              
                              <td>
-                                <h6 class = "picdetails">{{person.camera | uppercase}}</h6>
+                                <h6 class = "picdetails">{{person.exposure | uppercase}}</h6>
                               </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                                <picture>
-                                                  <source media="(min-width:650px)" srcset="assets/images/lense.png">
-                                                  <source media="(min-width:465px)" srcset="assets/images/lense.png">
-                                                  <img class="imagesitylelense" src="assets/images/lense.png" alt="Flowers"  width="20" height="20">
-                                                </picture>
-                                              </td>
-                                             
-                                             <td>
-                                                <h6 class = "picdetails">{{person.lense | uppercase}}</h6>
-                                              </td>
-                                              </tr>              
-  
-                                                 
-  
-                                                                    
-                                                                                    
-  
-                                      </table>
-							
+                        </tr>
+          
+                        <tr>
+                          <td>
+                              <picture>
+                                <source media="(min-width:650px)" srcset="assets/images/ashutte.png">
+                                <source media="(min-width:465px)" srcset="assets/images/ashutte.png">
+                               
+                              </picture>
+                            </td>
+                           
+                           <td>
+                              <h6 class = "picdetails">{{person.apparture}}</h6>
+                            </td>
+                         </tr>
+                         <tr>
+                          <td>
+                                          <picture>
+                                            <source media="(min-width:650px)" srcset="assets/images/iso.png">
+                                            <source media="(min-width:465px)" srcset="assets/images/iso.png">
+                                           
+                                          </picture>
+                                        </td>
+                                       
+                                       <td>
+                                          <h6 class = "picdetails">{{person.iso}}</h6>
+                           </td>
+                       </tr>
+                       <tr>
+                        <td>
+                                        <picture>
+                                          <source media="(min-width:650px)" srcset="assets/images/camera.png">
+                                          <source media="(min-width:465px)" srcset="assets/images/camera.png">
+                                          
+                                        </picture>
+                                      </td>
+                                     
+                                     <td>
+                                        <h6 class = "picdetails">{{person.camera | uppercase}}</h6>
+                                      </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                                        <picture>
+                                                          <source media="(min-width:650px)" srcset="assets/images/lense.png">
+                                                          <source media="(min-width:465px)" srcset="assets/images/lense.png">
+                                                          
+                                                        </picture>
+                                                      </td>
+                                                     
+                                                     <td>
+                                                        <h6 class = "picdetails">{{person.lense | uppercase}}</h6>
+                                                      </td>
+                                                      </tr>              
+          
+                                                         
+          
+                                                                            
+                                                                                            
+          
+                                              </table>
+                      
+                        </div>
+                  
+                      </a>
+        
+        
+        
+        
+                    </div>
+                    
+                    
+                    
+                  </div>
                 </div>
-                <div  *ngIf="! isValid"  class="photograhy">
-                  <div  id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+                <div>
+        
+                  </div>
+        
+              </section>
+         
+         
+       
 
+            <div class="row" *ngIf = fecthingbar>
+                <div class="col-lg-12">
+                    <div class="browse-btn2 text-center mt-50">
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </div>
                 </div>
-              </a>
-
-
-
-
             </div>
-            
-            
-            
-					</div>
         </div>
-        <div>
-
-          </div>
-
-			</section>
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container px-md-5">
-          <div class="row mb-5">
-            <div class="col-md">
-              <div class="ftco-footer-widget mb-4 ml-md-4">
-                <h2 class="ftco-heading-2">Recent Photos</h2>
-                <ul class="list-unstyled photo">
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_1.jpg);"></a></li>
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_2.jpg);"></a></li>
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_3.jpg);"></a></li>
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_4.jpg);"></a></li>
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_5.jpg);"></a></li>
-                  <li><a href="#" class="img" style="background-image: url(assets/images/image_6.jpg);"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md">
-               <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Archives</h2>
-                <ul class="list-unstyled categories">
-                  <li><a href="#">November 2018 <span>(105)</span></a></li>
-                  <li><a href="#">October 2018 <span>(212)</span></a></li>
-                  <li><a href="#">September 2018 <span>(150)</span></a></li>
-                  <li><a href="#">August 2018 <span>(100)</span></a></li>
-                  <li><a href="#">July 2018 <span>(200)</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Have a Questions?</h2>
-                <div class="block-23 mb-3">
-                  <ul>
-                    <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-                  </ul>
+    </section>
+    <!-- Popular Work End -->
+</main>
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding section-bg" data-background="assets/img/gallery/footer_bg.png">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="row justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img  class=" logosizefooter" src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>Consectetur adipisicinhg cvelicsed do eiusmod tempor inciducvccnt ut labosvrer adipisic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#"> Offers & Discounts</a></li>
+                                    <li><a href="#"> Get Coupon</a></li>
+                                    <li><a href="#">  Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Support</h4>
+                                <ul>
+                                    <li><a href="#">Frequently Asked Questions</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Report a Payment Issue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-  
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 col-md-7">
+                        <div  class="footer-copy-right op">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                   
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4 col-md-5">
+                        <div class="footer-copy-right f-right">
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
-		</div><!-- END COLORLIB-MAIN -->
-	</div><!-- END COLORLIB-PAGE -->
+    </div>
+    <!-- Footer End-->
+</footer>
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
-  <!-- loader -->
-  <div *ngIf="!isValid" id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- JS here -->

@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
       'assets/js/waypoints.min.js',
       'assets/js/jquery.countdown.min.js',
       'assets/js/hover-direction-snake.min.js',
-      'assets/js/contact.js',
+     
       'assets/js/jquery.form.js',
       'assets/js/jquery.validate.min.js',
       'assets/js/mail-script.js',

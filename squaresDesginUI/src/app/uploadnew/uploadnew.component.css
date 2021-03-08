@@ -1,0 +1,283 @@
+.picdetails
+{
+  color: white;
+  margin: 2px;
+  margin-top: 4px;
+  font: inherit;
+  font-size: small;
+  margin-left: 6px;
+
+}
+
+.imagesityle
+{
+  height: 17px;
+  margin: 2px;
+  width: 17px;
+  margin-left: 6px;
+}
+
+.imagesitylelense
+{
+  height: 18px;
+  margin: 2px;
+  width: 18px;
+  margin-left: 6px;
+
+}
+.imagesitylecamera
+{
+  height: 16px;
+  margin: 2px;
+  width: 19px;
+  margin-left: 6px;
+}
+
+.imagesityleexposer
+{
+  height: 23px;
+  margin: 2px;
+  width: 22px;
+  margin-left: 3px;
+}
+.titletg
+{
+
+  position: initial;
+    margin: auto;
+    margin-top: 2px;
+}
+
+
+
+
+.logosize
+{
+  margin-left: 12px;
+  width: 167px;
+
+}
+.sizep
+{
+  width: 87% !important;
+}
+.wdtadj
+{
+  width: 89% !important;
+}
+.wdtadj2
+{
+  width: 92% !important;
+}
+.logosizefooter
+{
+  margin-left: 12px;
+  width: 167px;
+
+}
+
+.loadmorebtn
+{
+background: #ff1313;
+font-family: "Rajdhani",sans-serif;
+text-transform: uppercase;
+padding: 30px 37px 30px 97px;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-size: 15px;
+font-weight: 400;
+border-radius: 0px;
+line-height: 1;
+-moz-user-select: none;
+letter-spacing: 1px;
+line-height: 0;
+margin-bottom: 0;
+margin: 10px;
+cursor: pointer;
+transition: color 0.4s linear;
+position: relative;
+z-index: 1;
+border: 0;
+overflow: hidden;
+margin: 0;
+}
+.pointer {cursor: pointer;}
+
+
+.btnd
+{
+  background: #ff1313;
+  font-family: "Rajdhani",sans-serif;
+  text-transform: uppercase;
+  padding: 30px 37px 30px 97px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 0px;
+  line-height: 1;
+  -moz-user-select: none;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px  !important;
+  margin-top: -80px;
+  height: 40px;
+}
+.titlesiz
+{
+  margin: inherit;
+    margin-top: -6em;
+  font-size: 30px;
+  color:#a76713;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+.section-padding20
+{
+padding-top: 20px  !important;
+padding-bottom: 70px;
+}
+.side445
+{
+
+  height: 6em  !important;
+    background-size: cover;
+}
+.hij
+{
+
+  width: 43rem;
+  border:2px solid #fff;
+ 
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+.op
+{
+  opacity: 0.03;
+}
+.brimg
+{
+
+  -webkit-filter: blur(8px);
+}
+@media (max-width: 600px) {
+  
+    .logosize
+{
+    margin-top: -13px;
+    margin-left: -10px; 
+    width: 148px;
+    margin-bottom: -14px;
+
+}
+
+
+}
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .brimgw{
+    top:-28px;
+  }
+
+  .logosize[_ngcontent-c1] {
+    margin-top: -12px;
+    margin-left: 12px;
+    width: 167px;
+  }
+  }
+  
+  /* iPad Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .brimgw{
+      top:-28px;
+    }
+  }

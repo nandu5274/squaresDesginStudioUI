@@ -63,6 +63,38 @@ export class CommonHttpService {
       
         xhr.open('POST',url.toString(), true);
   
+        xhr.setRequestHeader('Authorization','Bearer rk6Nuh6Jf_MAAAAAAAAAAb4lx5Uo-f_GC630Mq86KBQCvV5IjJ280yxqyRf2cRnH');
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.setRequestHeader('Dropbox-API-Arg', '{\"path\":\"\\/portfolio_main\\/protifolio.xlsx\"}');
+        xhr.responseType='blob';
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+
+                    var contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+                    var blob = new Blob([xhr.response], { type: contentType });
+                    observer.next(blob);
+                    observer.complete();
+                } else {
+                    observer.error(xhr.response);
+                }
+            }
+        }
+        xhr.send();
+
+    });
+} 
+
+exportser2(url:string): Observable<Object[]> {
+    return Observable.create(observer => {
+        let xhr = new XMLHttpRequest();
+   
+
+
+      
+        xhr.open('POST',url.toString(), true);
+  
         xhr.setRequestHeader('Authorization','Bearer BlGP1wjm_oQAAAAAAAAAAVjpe035rohPVKwuNMaRtq2I05A10aDDEMhYWkaRKznJ');
         xhr.setRequestHeader('Content-Type', 'text/plain');
         xhr.setRequestHeader('Dropbox-API-Arg', '{\"path\":\"\\/DETAILS\\/picdetails.xlsx\"}');
